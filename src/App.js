@@ -107,7 +107,7 @@ function App() {
         try {
             const fetchOptions = {
                 method: 'GET',
-                credentials: 'include',
+                'credentials': 'include',
                 headers: {
                     'Content-Type': 'application/json;charset=utf-8',
                     authorisation: "Basic " + window.btoa("seppe:seppe")
@@ -169,7 +169,7 @@ function App() {
                 headers: {
                     'Content-Type': 'application/json;charset=utf-8',
                     'X-Requested-With': 'XMLHttpRequest',
-                    authorization: "Basic " + window.btoa(`${username}:${password}`)
+                    authorisation: "Basic " + window.btoa(`${username}:${password}`)
                 },
             };
             const response = await fetch(`${process.env.REACT_APP_BOOKSSERVER}/authenticate`, fetchOptions);
@@ -238,7 +238,7 @@ function App() {
         try {
             const fetchOptions = {
                 method: 'GET',
-                credentials: 'include',
+                'credentials': 'include',
                 headers: {
                     'Content-Type': 'application/json;charset=utf-8'
                 }
